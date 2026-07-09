@@ -1,0 +1,122 @@
+{
+  "info": {
+    "name": "WebAPI - Postman Collection",
+    "_postman_id": "webapi-collection-001",
+    "description": "Collection for WebAPI endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "https://web-api-indol.vercel.app",
+      "type": "string"
+    },
+    { "key": "provinceId", "value": "1" },
+    { "key": "districtId", "value": "1" },
+    { "key": "stationId", "value": "1" },
+    { "key": "vehicleId", "value": "1" },
+    { "key": "modelId", "value": "1" }
+  ],
+  "item": [
+    {
+      "name": "Root",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/",
+          "host": ["{{base_url}}"],
+          "path": ["/"]
+        }
+      }
+    },
+    {
+      "name": "List Provinces",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{base_url}}/provinces", "host": ["{{base_url}}"], "path": ["provinces"] }
+      }
+    },
+    {
+      "name": "Get Province by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{base_url}}/provinces/{{provinceId}}", "host": ["{{base_url}}"], "path": ["provinces","{{provinceId}}"] }
+      }
+    },
+    {
+      "name": "List Districts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{base_url}}/districts", "host": ["{{base_url}}"], "path": ["districts"] }
+      }
+    },
+    {
+      "name": "Get District by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{base_url}}/districts/{{districtId}}", "host": ["{{base_url}}"], "path": ["districts","{{districtId}}"] }
+      }
+    },
+    {
+      "name": "List Stations",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{base_url}}/stations", "host": ["{{base_url}}"], "path": ["stations"] }
+      }
+    },
+    {
+      "name": "Get Station by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{base_url}}/stations/{{stationId}}", "host": ["{{base_url}}"], "path": ["stations","{{stationId}}"] }
+      }
+    },
+    {
+      "name": "List Vehicles",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{base_url}}/vehicles", "host": ["{{base_url}}"], "path": ["vehicles"] }
+      }
+    },
+    {
+      "name": "Get Vehicle by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{base_url}}/vehicles/{{vehicleId}}", "host": ["{{base_url}}"], "path": ["vehicles","{{vehicleId}}"] }
+      }
+    },
+    {
+      "name": "Vehicle Pings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{base_url}}/vehicles/{{vehicleId}}/pings", "host": ["{{base_url}}"], "path": ["vehicles","{{vehicleId}}","pings"] }
+      }
+    },
+    {
+      "name": "List Models",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{base_url}}/models", "host": ["{{base_url}}"], "path": ["models"] }
+      }
+    },
+    {
+      "name": "Get Model by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": { "raw": "{{base_url}}/models/{{modelId}}", "host": ["{{base_url}}"], "path": ["models","{{modelId}}"] }
+      }
+    }
+  ]
+}
